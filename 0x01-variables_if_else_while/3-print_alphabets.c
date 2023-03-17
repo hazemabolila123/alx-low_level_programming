@@ -10,6 +10,9 @@ int main(void)
 	{
 		putchar(i);
 	}
+	for (int i = 65; i < 91; i++)
+	{
+		putchar(i);
+	}
 	putchar('\n');
-
 }
