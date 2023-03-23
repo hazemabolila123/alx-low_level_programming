@@ -3,7 +3,7 @@
  * _isupper - Function checks if the number it takes represents
  * an upper letter or not
  * @c: Function parameter
- * Return: 1 if the letter is uppercase else 0
+ * Return: 1 if the letter is uppercase else it returns 0
  *
  */
 int _isupper(int c)
