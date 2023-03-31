@@ -1,4 +1,10 @@
 #include "main.h"
+/**
+ * leet - Function
+ * @s: Functon parameter
+ * Return: Sucess
+ *
+ */
 
 char *leet(char *s)
 {
