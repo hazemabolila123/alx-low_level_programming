@@ -28,14 +28,14 @@ char *str_concat(char *s1, char *s2)
 	if (ptr == NULL)
 		return (NULL);
 
-	for (i = 0; i < (cnt1 + cnt2); i++)
+	for (i = 0; i <= (cnt1 + cnt2); i++)
 	{
 		if (i < cnt1)
 			ptr[i] = s1[i];
 		else
 			ptr[i] = s2[i - cnt1];
 	}
-	ptr[i] ='\0';
+	ptr[i] = '\0';
 
 	return (ptr);
 }
