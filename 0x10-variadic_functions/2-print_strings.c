@@ -2,11 +2,18 @@
 #include <stdarg.h>
 #include "variadic_functions.h"
 
+/**
+ * print_strings - A function that prints a variable number of arguments
+ * @separator: Required funstion argument
+ * @n: Variable arguments count
+ *
+ */
+
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
 	va_list countptr;
-	char * tmp;
+	char *tmp;
 
 	va_start(countptr, n);
 
