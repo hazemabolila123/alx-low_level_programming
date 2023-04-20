@@ -12,7 +12,7 @@
 typedef struct op
 {
 	char *op;
-	int (*f)(char *, va_list);
+	void (*f)(char *, va_list);
 } op_t;
 
 int _putchar(char c);
