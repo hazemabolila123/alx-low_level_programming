@@ -19,9 +19,9 @@ void format_char(char *sp, va_list op)
  * @op: Parameter of type va_list
  *
  */
-void format_char(char *sp, va_list op)
+void format_int(char *sp, va_list op)
 {
-        printf("%s%d", sp, va_arg(op, int));
+	printf("%s%d", sp, va_arg(op, int));
 }
 
 /**
@@ -32,7 +32,7 @@ void format_char(char *sp, va_list op)
  */
 void format_float(char *sp, va_list op)
 {
-        printf("%s%f", sp, va_arg(op, float));
+	printf("%s%f", sp, va_arg(op, double));
 }
 
 /**
@@ -43,39 +43,42 @@ void format_float(char *sp, va_list op)
  */
 void format_string(char *sp, va_list op)
 {
-	char * str;
+	char *str = va_arg(op, char *);
 
-	tmp = va_arg(op , char *);
-	
 	if (str == NULL)
 		str = "(nil)";
-
-        printf("%s%s", sp, str);
+	printf("%s%s", sp, str);
 }
 
+/**
+ * print_all- A function that prints anything.
+ * @format: Function parameter
+ *
+ */
 void print_all(const char * const format, ...)
 {
 	int i = 0, j;
-	char *sp= "";
+	char *sp = "";
 	va_list counterptr;
 	op_t ops[] = {
-        {"c", format_char},
-        {"i", format_int},
-        {"f", format_float},
-        {"s", format_string},
-        {NULL, NULL}
-    };
+		{"c", format_char},
+		{"i", format_int},
+		{"f", format_float},
+		{"s", format_string},
+		{NULL, NULL}
+	};
 
-	while (format != NULL && format[i] != NULL)
+	va_start(counterptr, format);
+
+	while (format != NULL && format[i] != '\0')
 	{
 		j = 0;
-		
 		while (ops[j].op != NULL)
 		{
 			if (ops[j].op[0] == format[i])
 			{
 				ops[j].f(sp, counterptr);
-				sp = ", "
+				sp = ", ";
 			}
 			j++;
 		}
