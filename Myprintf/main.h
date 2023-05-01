@@ -9,6 +9,9 @@
 int _printf(const char *format, ...);
 int _putchar(char c);
 
+/** Macros **/
+#define BUFFER_SIZE 1024
+
 /** built_in functions **/
 int _strlen(char *str);
 char *_strdup(char *str);
