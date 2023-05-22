@@ -48,17 +48,22 @@ int _strcmp(char *s1, char *s2)
  */
 char *_strcat(char *dest, char *src)
 {
-	int slen = 0;
-	char dlen;
-	int i;
+	int total, i, j;
+	char *ptr;
+
+	total = _strlen(dest) + _strlen(src) + 1;
+	new = malloc(sizeof(char) * total);
+	if (ptr == NULL)
+		return (NULL);
 
 	for (i = 0; dest[i] != '\0'; i++)
-		dlen++;
-	for (i = 0; src[i] != '\0'; i++)
-		slen++;
-	for (i = 0; i <= slen; i++)
-		dest[dlen + i] = src[i];
-	return (dest);
+		ptr[i] = dest[i];
+
+	for (j = 0; src[j] != '\0'; i++, j++)
+		ptr[i] = src[j];
+
+	ptr[i] = '\0';
+	return (ptr);
 }
 
 

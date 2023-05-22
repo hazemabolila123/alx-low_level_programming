@@ -9,8 +9,8 @@
 int check_path(char *path)
 {
 	char *cmp = "/bin/", *ptr, *cpath;
-
 	int i = 0, j = 0;
+
 	ptr = malloc(sizeof(char) * 20);
 
 	if (ptr == NULL)

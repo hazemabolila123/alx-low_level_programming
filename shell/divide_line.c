@@ -12,7 +12,7 @@ char **divide_line(char *str)
 {
 	char **commands_arr, *token;
 	int i = 0, j = 0;
-	char * delim = " ";
+	char *delim = " ";
 
 	commands_arr = malloc(sizeof(char *) * 20);
 	if (commands_arr == NULL)
