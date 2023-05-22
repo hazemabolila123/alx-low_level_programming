@@ -22,7 +22,7 @@ char *create_path(char *command)
 		tmp = entity->d_name;
 		if (_strcmp(tmp, command) == 0)
 		{
-			path = _strcat("/bin", command);
+			path = _strcat("/bin/", command);
 			closedir(dir);
 			return (path);
 		}

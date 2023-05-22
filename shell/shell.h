@@ -11,7 +11,7 @@
 #include <sys/wait.h>
 
 /** Prototypes of the user defined function used in the code **/
-char **divide_line(char *str, char *delim);
+char **divide_line(char *str);
 char *create_path(char *command);
 int check_path(char *path);
 void execute_process(char **commands_arr, char **argv, char *env[]);
