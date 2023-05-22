@@ -52,7 +52,7 @@ char *_strcat(char *dest, char *src)
 	char *ptr;
 
 	total = _strlen(dest) + _strlen(src) + 1;
-	new = malloc(sizeof(char) * total);
+	ptr = malloc(sizeof(char) * total);
 	if (ptr == NULL)
 		return (NULL);
 
