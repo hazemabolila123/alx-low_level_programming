@@ -4,13 +4,13 @@
  * divide_line - A function that divide the command line into
  * commands an store them in an array
  * @str: The command line to be split
- * @delim: special char to split the line according to
  *
  * Return: Array of commands
  */
 char **divide_line(char *str)
 {
-	char **commands_arr, *token;
+	char *token;
+	char **commands_arr;
 	int i = 0, j = 0;
 	char *delim = " ";
 

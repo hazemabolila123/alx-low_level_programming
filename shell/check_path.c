@@ -12,7 +12,6 @@ int check_path(char *path)
 	int i = 0, j = 0;
 
 	ptr = malloc(sizeof(char) * 20);
-
 	if (ptr == NULL)
 	{
 		free(ptr);
@@ -40,6 +39,7 @@ int check_path(char *path)
 		free(ptr);
 		return (1);
 	}
+	free(ptr);
 	return (0);
 }
 
